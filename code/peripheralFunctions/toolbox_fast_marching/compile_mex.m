@@ -1,16 +1,16 @@
 % compile mex file
-mex mex/perform_front_propagation_2d.cpp mex/perform_front_propagation_2d_mex.cpp mex/fheap/fib.cpp 
-mex mex/perform_front_propagation_3d.cpp mex/perform_front_propagation_3d_mex.cpp  mex/fheap/fib.cpp 
-mex mex/perform_circular_front_propagation_2d.cpp mex/perform_front_propagation_2d.cpp mex/fheap/fib.cpp 
+mex -compatibleArrayDims mex/perform_front_propagation_2d.cpp mex/perform_front_propagation_2d_mex.cpp mex/fheap/fib.cpp
+mex -compatibleArrayDims mex/perform_front_propagation_3d.cpp mex/perform_front_propagation_3d_mex.cpp  mex/fheap/fib.cpp
+mex -compatibleArrayDims mex/perform_circular_front_propagation_2d.cpp mex/perform_front_propagation_2d.cpp mex/fheap/fib.cpp
 
 % anisotropic FM
 %mex mex/perform_front_propagation_anisotropic.cpp
-mex mex/anisotropic-fm-feth/fm2dAniso.cpp
+mex -compatibleArrayDims mex/anisotropic-fm-feth/fm2dAniso.cpp
 
 % compiling skeleton
-mex mex/skeleton.cpp
+mex -compatibleArrayDims mex/skeleton.cpp
 % compiling distance transform
-mex mex/eucdist2.c
+mex -compatibleArrayDims mex/eucdist2.c
 
 disp('Compiling perform_front_propagation_mesh, might time some time.');
 rep = 'mex/';
